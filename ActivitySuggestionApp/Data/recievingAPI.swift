@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum APIData {
-    static let URL = "https://www.boredapi.com/api/activity"
+enum APIData: Decodable {
+    static let baseURL = "https://www.boredapi.com/api/activity"
 }
