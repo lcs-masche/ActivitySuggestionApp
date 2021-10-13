@@ -13,5 +13,6 @@ struct suggestedActivity: Decodable {
     let participants: Int
     let price: Double
     let link: String
+    let key: String
     let accessibility: String
 }

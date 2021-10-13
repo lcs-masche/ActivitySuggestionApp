@@ -16,11 +16,11 @@ protocol activityViewModel: ObservableObject {
 
 final class ActivityViewModelImplementation:  activityViewModel {
     
-    @Published private(set) var activity: [ActivityService] = []
+    @Published private(set) var activity: [suggestedActivity] = []
     
-    private let service: ActivityService
+    private let service: ActivityServiceImplementation
     
-    init(service: ActivityService) {
+    init(service: ActivityServiceImplementation) {
         self.service = service
     }
     
