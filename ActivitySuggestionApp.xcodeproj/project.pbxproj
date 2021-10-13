@@ -14,6 +14,7 @@
 		3DAAA99E27151CA00055BD63 /* recievingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA99D27151CA00055BD63 /* recievingAPI.swift */; };
 		3DAAA9A027151D400055BD63 /* activitySuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA99F27151D400055BD63 /* activitySuggestion.swift */; };
 		3DAAA9A2271521C30055BD63 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA9A1271521C30055BD63 /* DataService.swift */; };
+		3DAAA9A62716532E0055BD63 /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DAAA9A52716532E0055BD63 /* ActivityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3DAAA99D27151CA00055BD63 /* recievingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recievingAPI.swift; sourceTree = "<group>"; };
 		3DAAA99F27151D400055BD63 /* activitySuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activitySuggestion.swift; sourceTree = "<group>"; };
 		3DAAA9A1271521C30055BD63 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		3DAAA9A52716532E0055BD63 /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +59,10 @@
 		3DAAA98D27151AF80055BD63 /* ActivitySuggestionApp */ = {
 			isa = PBXGroup;
 			children = (
+				3DAAA9A7271656E70055BD63 /* Views */,
+				3DAAA9A3271652FB0055BD63 /* ViewModel */,
 				3DAAA99C27151B520055BD63 /* Data */,
 				3DAAA98E27151AF80055BD63 /* ActivitySuggestionAppApp.swift */,
-				3DAAA99027151AF80055BD63 /* ContentView.swift */,
 				3DAAA99227151B000055BD63 /* Assets.xcassets */,
 				3DAAA99427151B000055BD63 /* Preview Content */,
 			);
@@ -82,6 +85,22 @@
 				3DAAA9A1271521C30055BD63 /* DataService.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		3DAAA9A3271652FB0055BD63 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DAAA9A52716532E0055BD63 /* ActivityViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DAAA9A7271656E70055BD63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3DAAA99027151AF80055BD63 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +178,7 @@
 				3DAAA99127151AF80055BD63 /* ContentView.swift in Sources */,
 				3DAAA98F27151AF80055BD63 /* ActivitySuggestionAppApp.swift in Sources */,
 				3DAAA9A2271521C30055BD63 /* DataService.swift in Sources */,
+				3DAAA9A62716532E0055BD63 /* ActivityViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
