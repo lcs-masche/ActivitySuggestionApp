@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var ViewModel = ActivityViewModelImplementation(service: ActivityServiceImplementation()
+    )
+    
     var body: some View {
-        Text("Hello, you piece of Shit")
-            .padding()
+        ForEach(ViewModel.activity, id: \.activity) { item in
+            
+        }
     }
 }
 
