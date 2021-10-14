@@ -8,13 +8,13 @@
 import Foundation
 
 struct suggestedActivity: Decodable {
-    let activity: String
-    let type: String
-    let participants: Int
-    let price: Double
-    let link: String
+    let activity: String  //1
+    let type: String   //2
+    let participants: Int //2
+    let price: Double //4
+    let link: String //3
     let key: String
-    let accessibility: String
+    let accessibility: String //4
 }
 
 extension suggestedActivity {
@@ -22,3 +22,4 @@ extension suggestedActivity {
         suggestedActivity(activity: "Try not to laugh, or you will die!", type: "Fun", participants: 100, price: 0.0, link: "wikipedia.com", key: "8329572398", accessibility: "1")
     ]
 }
+

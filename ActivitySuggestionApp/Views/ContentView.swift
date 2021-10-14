@@ -8,18 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @StateObject private var ViewModel = ActivityViewModelImplementation(service: ActivityServiceImplementation()
     )
     
     var body: some View {
-        ForEach(ViewModel.activity, id: \.activity) { item in
+        
+        ZStack {
             
+            LinearGradient(colors: [.red, .blue],
+                           startPoint: .topLeading,
+                           endPoint: .bottomTrailing)
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            VStack {
+                
+                ActivityDisplay()
+                    .padding(.bottom, 15)
+                
+                ParticipantsAndTypeView()
+                    .padding(.bottom, 15)
+                
+                priceAndAccesibility()
+                    .padding(.bottom, 15)
+                
+                
+            }
         }
+        
+        
+        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
