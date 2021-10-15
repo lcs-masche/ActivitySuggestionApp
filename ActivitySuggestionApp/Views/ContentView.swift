@@ -33,6 +33,9 @@ struct ContentView: View {
                 priceAndAccesibility()
                     .padding(.bottom, 15)
                 
+                LinkView()
+                    .padding(.bottom, 15)
+                
                 
             }
         }
