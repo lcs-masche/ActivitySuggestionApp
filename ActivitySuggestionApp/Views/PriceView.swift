@@ -22,7 +22,7 @@ struct PriceView: View {
                 
                 Image(systemName: "bitcoinsign.circle")
                     .font(.system(size: 12, weight: .black))
-                Text("\(price)")
+                Text("$\(String(format: "%.2f", arguments: [price]))")
                     .font(.headline)
             }
         }

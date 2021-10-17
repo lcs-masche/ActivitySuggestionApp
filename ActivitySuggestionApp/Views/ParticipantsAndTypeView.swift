@@ -26,6 +26,7 @@ struct ParticipantsAndTypeView: View {
                         .font(.system(size: 10, weight: .black))
                     Text("\(participants)")
                         .font(.subheadline)
+                    
                 }
             }
             .font(.subheadline)

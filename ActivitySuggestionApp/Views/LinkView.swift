@@ -16,7 +16,7 @@ struct LinkView: View {
             Image(systemName: "safari")
                 .font(.system(size: 15, weight: .black))
             if !link.isEmpty {
-                Link("See more", destination: URL(string: "\(link)")!)
+                Link("See more", destination: URL(string: "\(link)"))
             }
         }
         .font(.headline)
