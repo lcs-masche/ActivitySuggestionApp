@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ParticipantsAndTypeView: View {
     
-    @State var participants: Int
+    var participants: Int
     
     var body: some View {
         HStack {
@@ -35,8 +35,8 @@ struct ParticipantsAndTypeView: View {
             .background {
                 RoundedRectangle(cornerRadius: 5)
             }
-            .padding(.leading, 5)
-            .padding(.trailing, 15)
+            .padding(.leading, 15)
+            .padding(.trailing, 5)
             .foregroundColor(.white)
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LinkView: View {
     
-    @State var link: String
+    var link: String
     
     var body: some View {
         HStack{

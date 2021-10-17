@@ -10,7 +10,7 @@ import SwiftUI
 struct priceAndAccesibility: View {
     
 
-    @State var accessibility: Double
+    var accessibility: Double
     
     var body: some View {
        
@@ -23,7 +23,7 @@ struct priceAndAccesibility: View {
                     
                     Image(systemName: "person.and.arrow.left.and.arrow.right")
                         .font(.system(size: 13, weight: .black))
-                    Text(accessibility)
+                    Text("\(accessibility)")
                         .font(.subheadline)
                 }
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActivityDisplay: View {
     
-    @State var activity: String
+    var activity: String
     
     var body: some View {
         

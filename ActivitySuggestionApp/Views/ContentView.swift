@@ -30,10 +30,10 @@ struct ContentView: View {
                 
                 HStack {
                     ParticipantsAndTypeView(participants: ViewModel.activity.participants)
-                        .padding(.bottom, 15)
+                        
                     
                     TypeView(type: ViewModel.activity.type)
-                        .padding(.bottom, 15)
+                        
                 }
                 
                 
@@ -44,14 +44,17 @@ struct ContentView: View {
                     
                     PriceView(price: ViewModel.activity.price)
                         .padding(.bottom, 15)
-                    
-                    
-                    
-                    LinkView(link: ViewModel.activity.link)
-                        .padding(.bottom, 15)
-                    
-                    
                 }
+                
+                LinkView(link: ViewModel.activity.link)
+                    .padding(.bottom, 15)
+                
+                
+//                Button("Another suggestion") {
+//
+//
+//
+//                }
                 
             }
             .task {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PriceView: View {
     
-    @State var price: Double
+    var price: Double
    
     var body: some View {
         VStack {

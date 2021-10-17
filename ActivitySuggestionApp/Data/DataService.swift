@@ -25,8 +25,9 @@ final class ActivityServiceImplementation: ActivityService {
         let (data, _) = try await urlSession.data(from: url!)
         
         //decodes the data that it recieves from the function that recieves the data from the url
-        return try JSONDecoder().decode(suggestedActivity.self, from: data)
-    
+        let response = try JSONDecoder().decode(suggestedActivity.self, from: data)
+        print(response)
+        return response
     }
     
 }

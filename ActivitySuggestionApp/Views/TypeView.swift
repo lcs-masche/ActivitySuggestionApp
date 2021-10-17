@@ -34,8 +34,8 @@ struct TypeView: View {
         .background {
             RoundedRectangle(cornerRadius: 5)
         }
-        .padding(.leading, 15)
-        .padding(.trailing, 5)
+        .padding(.leading, 5)
+        .padding(.trailing, 15)
         .foregroundColor(.white)
     }
 }
