@@ -26,7 +26,7 @@ final class ActivityServiceImplementation: ActivityService {
         
         //decodes the data that it recieves from the function that recieves the data from the url
         let response = try JSONDecoder().decode(suggestedActivity.self, from: data)
-        print(response)
+        //print(response)
         return response
     }
     

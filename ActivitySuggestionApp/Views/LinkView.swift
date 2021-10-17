@@ -17,6 +17,8 @@ struct LinkView: View {
                 .font(.system(size: 15, weight: .black))
             if !link.isEmpty {
                 Link("See more", destination: URL(string: "\(link)")!)
+            } else {
+                Text("No Link Available")
             }
         }
         .font(.headline)

@@ -9,6 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
+//    @object private func didPullToTefresh() {
+//
+//        DispatchQueue.main.async {
+//            self.ActivityService.refreshControl?.endRefreshing()
+//        }
+//
+//    }
+    
+    //@Environment(\.refresh) private var action
+    //@StateObject private var actionPerformer = RefreshActionPerformer()
+    
     @StateObject private var ViewModel = ActivityViewModelImplementation(service: ActivityServiceImplementation()
     )
     
@@ -30,10 +41,10 @@ struct ContentView: View {
                 
                 HStack {
                     ParticipantsAndTypeView(participants: ViewModel.activity.participants)
-                        
+                    
                     
                     TypeView(type: ViewModel.activity.type)
-                        
+                    
                 }
                 
                 
@@ -48,22 +59,22 @@ struct ContentView: View {
                 
                 LinkView(link: ViewModel.activity.link)
                     .padding(.bottom, 15)
-                
-                
-//                Button("Another suggestion") {
-//
-//
-//
-//                }
+                /*
+                 NavigationLink(destination: ContentView()) {
+                 Text("New Suggestion")
+                 }
+                 */
                 
             }
             .task {
                 await ViewModel.getRandomActivity()
-                
             }
-            
-            
+//            .refreshControl = UIRefreshControl()
+//            .refreshControl = ActivityService?.addTarget(self, action: #selector(didPullToTefresh))
         }
+        
+        
+        
     }
     
     struct ContentView_Previews: PreviewProvider {
