@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct LinkView: View {
+    
+    @State var link: String
+    
     var body: some View {
         HStack{
             Image(systemName: "safari")
                 .font(.system(size: 15, weight: .black))
-            Link(destination: URL(string: "\(link)")!, label: {
-                Text("See more")
-            })
+            if !link.isEmpty {
+                Link("See more", destination: URL(string: "\(link)")!)
+            }
         }
         .font(.headline)
         .foregroundColor(.black)
@@ -25,11 +28,5 @@ struct LinkView: View {
         }
         .padding(.horizontal, 15)
         .foregroundColor(.white)
-    }
-}
-
-struct LinkView_Previews: PreviewProvider {
-    static var previews: some View {
-        LinkView()
     }
 }

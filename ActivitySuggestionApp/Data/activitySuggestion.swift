@@ -14,12 +14,12 @@ struct suggestedActivity: Decodable {
     let price: Double //4
     let link: String //3
     let key: String
-    let accessibility: String //4
+    let accessibility: Double //4
 }
 
-extension suggestedActivity {
-    static let dummyData: [suggestedActivity] = [
-        suggestedActivity(activity: "Try not to lajgvjgcgcgcgcgcjgcjgcjgcjgcjgcjgcjcjgcjgcjgcjgcjgcugh, or you will die!", type: "Fun", participants: 100, price: 0.0, link: "wikipedia.com", key: "8329572398", accessibility: "1")
-    ]
-}
+//extension suggestedActivity {
+//    static let dummyData: [suggestedActivity] = [
+//        suggestedActivity(activity: "Try not to laugh, or you will die!", type: "Fun", participants: 100, price: 0.0, link: "wikipedia.com", key: "8329572398", accessibility: "1")
+//    ]
+//}
 

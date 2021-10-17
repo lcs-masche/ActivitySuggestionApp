@@ -14,6 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         
+        
         ZStack {
             
             LinearGradient(colors: [.red, .blue],
@@ -24,24 +25,42 @@ struct ContentView: View {
             
             VStack {
                 
-                ActivityDisplay()
+                ActivityDisplay(activity: ViewModel.activity.activity)
                     .padding(.bottom, 15)
                 
-                ParticipantsAndTypeView()
-                    .padding(.bottom, 15)
+                HStack {
+                    ParticipantsAndTypeView(participants: ViewModel.activity.participants)
+                        .padding(.bottom, 15)
+                    
+                    TypeView(type: ViewModel.activity.type)
+                        .padding(.bottom, 15)
+                }
                 
-                priceAndAccesibility()
-                    .padding(.bottom, 15)
                 
-                LinkView()
-                    .padding(.bottom, 15)
                 
+                HStack {
+                    priceAndAccesibility(accessibility: ViewModel.activity.accessibility)
+                        .padding(.bottom, 15)
+                    
+                    PriceView(price: ViewModel.activity.price)
+                        .padding(.bottom, 15)
+                    
+                    
+                    
+                    LinkView(link: ViewModel.activity.link)
+                        .padding(.bottom, 15)
+                    
+                    
+                }
                 
             }
+            .task {
+                await ViewModel.getRandomActivity()
+                
+            }
+            
+            
         }
-        
-        
-        
     }
     
     struct ContentView_Previews: PreviewProvider {

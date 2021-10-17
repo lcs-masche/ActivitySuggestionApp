@@ -16,7 +16,7 @@ protocol activityViewModel: ObservableObject {
 
 final class ActivityViewModelImplementation:  activityViewModel {
     
-    @Published private(set) var activity: [suggestedActivity] = []
+    @Published private(set) var activity: suggestedActivity = suggestedActivity(activity: "", type: "", participants: 0, price: 0.0, link: "", key: "", accessibility: 0.0)
     
     private let service: ActivityServiceImplementation
     
